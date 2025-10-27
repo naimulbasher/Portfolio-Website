@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Md. Naimul Basher — SQA Portfolio</title>
+  <meta name="description" content="Portfolio of Md. Naimul Basher — Aspiring Software Quality Assurance Engineer." />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #0f172a;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --border: #1f2a44;
+      --chip: #0b1b3a;
+      --g1: linear-gradient(135deg, #6366f1 0%, #06b6d4 50%, #22c55e 100%);
+      --g2: linear-gradient(135deg, #f97316 0%, #ef4444 100%);
+      --g3: linear-gradient(135deg, #a855f7 0%, #06b6d4 100%);
+      --accent: #6366f1;
+    }
+
+    .theme-light {
+      --bg: #f7f9ff;
+      --panel: #ffffff;
+      --text: #0b1220;
+      --muted: #475569;
+      --border: #dbeafe;
+      --chip: #eef2ff;
+      --accent: #3b82f6;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      height: 100%;
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial;
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 10% -10%, rgba(99, 102, 241, 0.15), transparent 60%),
+        radial-gradient(1000px 700px at 110% 10%, rgba(34, 197, 94, 0.12), transparent 60%),
+        radial-gradient(900px 600px at 50% 120%, rgba(6, 182, 212, 0.12), transparent 60%),
+        var(--bg);
+      letter-spacing: .1px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(15, 23, 42, .55);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border)
+    }
+
+    .theme-light header {
+      background: rgba(255, 255, 255, .78)
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px
+    }
+
+    .brand {
+      font-weight: 900;
+      letter-spacing: .5px;
+      font-size: 18px;
+      background: var(--g1);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    .navlinks {
+      display: none;
+      gap: 22px;
+      font-size: 14px;
+      color: var(--muted)
+    }
+
+    .navlinks a {
+      position: relative
+    }
+
+    .navlinks a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      height: 2px;
+      width: 0;
+      background: var(--accent);
+      transition: width .25s ease
+    }
+
+    .navlinks a:hover {
+      color: #fff
+    }
+
+    .theme-light .navlinks a:hover {
+      color: #111827
+    }
+
+    .navlinks a:hover::after {
+      width: 100%
+    }
+
+    @media(min-width:720px) {
+      .navlinks {
+        display: flex
+      }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid transparent;
+      transition: transform .15s ease, box-shadow .15s ease, opacity .2s ease;
+      will-change: transform
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(3, 7, 18, .35)
+    }
+
+    .btn:active {
+      transform: translateY(0)
+    }
+
+    .btn-primary {
+      background: var(--g1);
+      color: #0b1220
+    }
+
+    .btn-secondary {
+      background: var(--g2);
+      color: #0b1220
+    }
+
+    .btn-outline {
+      border-color: var(--accent);
+      color: var(--text);
+      background: transparent
+    }
+
+    .btn-outline:hover {
+      background: rgba(99, 102, 241, .08)
+    }
+
+    .theme-light .btn:hover {
+      box-shadow: 0 10px 20px rgba(2, 6, 23, .15)
+    }
+
+    .theme-light .btn-outline:hover {
+      background: rgba(59, 130, 246, .08)
+    }
+
+    .hero {
+      padding: 56px 0 20px
+    }
+
+    h1 {
+      font-size: 38px;
+      margin: 0 0 6px
+    }
+
+    .tagline {
+      font-weight: 700;
+      font-size: 16px;
+      background: var(--g1);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px
+    }
+
+    .meta a {
+      text-decoration: underline;
+      text-underline-offset: 3px
+    }
+
+    .theme-light .meta a {
+      color: #1f2937
+    }
+
+    .summary {
+      margin-top: 16px;
+      color: #cbd5e1;
+      max-width: 72ch;
+      line-height: 1.7
+    }
+
+    .theme-light .summary {
+      color: #374151
+    }
+
+    section {
+      padding: 28px 0;
+      border-top: 1px solid var(--border)
+    }
+
+    .theme-light section {
+      border-top-color: #e6efff
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px
+    }
+
+    .chip {
+      font-size: 12px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, .15), rgba(6, 182, 212, .15));
+      border: 1px solid var(--border);
+      color: #e5e7eb
+    }
+
+    .theme-light .chip {
+      color: #0f172a;
+      background: #eef2ff;
+      border-color: #dbeafe
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px
+    }
+
+    @media(min-width:720px) {
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      background: rgba(15, 23, 42, .75);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .02) inset, 0 8px 24px rgba(2, 6, 23, .35);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, opacity .6s ease, translate .6s ease;
+      opacity: 0;
+      translate: 0 12px
+    }
+
+    .card.revealed {
+      opacity: 1;
+      translate: 0 0
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: #334155;
+      box-shadow: 0 10px 28px rgba(2, 6, 23, .55)
+    }
+
+    .card h3 {
+      margin: 2px 0;
+      font-size: 17px
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 14px
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 10px 0 0
+    }
+
+    li {
+      margin: 6px 0;
+      color: var(--text)
+    }
+
+    /* Light overrides for cards */
+    .theme-light .card {
+      background: #ffffff;
+      border-color: #e6efff;
+      box-shadow: 0 8px 24px rgba(2, 6, 23, .06)
+    }
+
+    .theme-light .card:hover {
+      border-color: #dbeafe;
+      box-shadow: 0 12px 28px rgba(2, 6, 23, .10)
+    }
+
+    .two {
+      display: grid;
+      gap: 18px
+    }
+
+    @media(min-width:720px) {
+      .two {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px;
+      color: var(--muted);
+      font-size: 12px
+    }
+
+    h2 {
+      font-size: 22px;
+      margin: 0 0 12px;
+      position: relative;
+      display: inline-block;
+      background: var(--g3);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      height: 3px;
+      width: 100%;
+      background: var(--g1);
+      border-radius: 999px;
+      opacity: .65
+    }
+
+    .toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text);
+      cursor: pointer;
+      font-size: 13px;
+      background: rgba(15, 23, 42, .65)
+    }
+
+    .theme-light .toggle {
+      background: #ffffff
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Naimul<span style="color:#94a3b8">.</span></div>
+      <nav class="navlinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div style="display:flex; gap:10px; align-items:center; flex-wrap: wrap;">
+        <button id="theme" class="toggle" title="Toggle Theme">🌙 Dark</button>
+        <a class="btn btn-outline" href="cv/CV.pdf" target="_blank" rel="MD. Naimul Basher">📄 CV</a>
+        <a class="btn btn-primary"
+          href="mailto:naimulbasher122@gmail.com?subject=Interested%20in%20Hiring%20Md.%20Naimul%20Basher%20for%20an%20SQA%20Role&body=Hi%20Md.%20Naimul%20Basher,%0D%0A%0D%0AI%20visited%20your%20portfolio%20and%20was%20impressed%20by%20your%20skills%20in%20Software%20Quality%20Assurance.%20I’d%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you.%0D%0A%0D%0ABest%20regards,%0D%0A[Your%20Name]%0D%0A[Your%20Company]%0D%0A[Contact%20Info]"
+          target="_blank">
+          ✉️ Hire Me
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="about">
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <!-- Profile Image -->
+        <img src="Image/photo.jpg" alt="Md. Naimul Basher"
+          style="width:120px; height:120px; border-radius:50%; object-fit:cover; border: 4px solid yellow;">
+      
+        <!-- Name and Details -->
+        <div>
+          <h1>Md. Naimul Basher</h1>
+          <p>Aspiring Software Quality Assurance Engineer</p>
+          <p>📍 Dhaka, Bangladesh</p>
+          <p>✉️ <a href="mailto:naimulbasher122@gmail.com">naimulbasher122@gmail.com</a></p>
+      
+          <!-- Social Links -->
+          <div style="display: flex; gap: 12px;">
+            <a href="https://www.linkedin.com/in/naimul-basher" target="_blank" style="color:#50A747; font-size: 24px;">🔗
+              LinkedIn</a>
+            <a href="https://github.com/naimulbasher" target="_blank" style="color:#3b82f6; font-size: 24px;">💻 GitHub</a>
+          </div>
+        </div>
+      </div>
+      <p class="summary">
+        Detail-oriented SQA engineer with hands-on experience in manual testing and foundations in automation.
+        Skilled at writing test cases, executing test plans, logging defects, and collaborating with developers.
+        Familiar with JIRA, TestRail, Postman, Selenium, and Playwright.
+      </p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;">
+        <a class="btn btn-secondary" href="#projects">🔥 View Projects</a>
+        <a class="btn btn-primary" href="#contact">🚀 Contact Me</a>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="chips">
+        <span class="chip">Manual Testing</span><span class="chip">Test Case Design</span><span class="chip">Bug
+          Reporting</span>
+        <span class="chip">Regression Testing</span><span class="chip">JIRA (Basic)</span><span class="chip">TestRail
+          (Basic)</span>
+        <span class="chip">Postman (Basic)</span><span class="chip">Selenium (Basic)</span><span class="chip">Playwright
+          (Basic)</span>
+        <span class="chip">Python</span><span class="chip">JavaScript (Node.js)</span><span
+          class="chip">MySQL</span><span class="chip">MongoDB</span>
+        <span class="chip">SDLC</span><span class="chip">STLC</span><span class="chip">Agile/Scrum</span>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Software Quality Assurance Intern</h3>
+          <div class="muted">Bangladesh Software Solution • Oct 2025 – Present</div>
+          <ul>
+            <li>Manual and exploratory testing of web applications.</li>
+            <li>Write & execute test cases; document defects in JIRA/TestRail.</li>
+            <li>Reproduce issues with developers; verify fixes and retests.</li>
+            <li>Learning basics of Selenium WebDriver and Postman collections.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>SEO Intern</h3>
+          <div class="muted">Eutropia IT, Shyamoli • Jul 2024 – Dec 2024</div>
+          <ul>
+            <li>Optimized site content; analyzed performance with SEO tools.</li>
+            <li>Validated website updates and fixes, improving QA awareness.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Content Writer Intern</h3>
+          <div class="muted">Himel Shop, Mirpur • Mar 2025 – Jun 2025</div>
+          <ul>
+            <li>Created and proofread product content for accuracy.</li>
+            <li>Collaborated with marketing and dev to maintain quality.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3><a href="https://github.com/naimulbasher/Manual-Testing-on-EduTech" target="_blank">Manual Testing on
+              EduTech Platform</a></h3>
+          <div class="muted">Manual Testing • JIRA • Test Cases</div>
+          <ul>
+            <li>Functional, regression, and usability testing on a web app.</li>
+            <li>Designed & executed test cases; logged defects in JIRA.</li>
+            <li>Prepared test summary reports aligned to objectives.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Adil Pay App (Upcoming)</h3>
+          <div class="muted">Selenium • Playwright • Automation</div>
+          <ul>
+            <li>Automation testing in progress (Selenium + Playwright).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="edu">
+      <h2>Education & Certifications</h2>
+      <div class="two">
+        <div class="card">
+          <h3>Education</h3>
+          <p class="muted" style="margin-top:6px;">
+            <strong>B.Sc. in Computer Science and Engineering (CSE)</strong><br />
+            University of Asia Pacific • CGPA: 3.34/4.00<br />
+            Sep 2020 – Mar 2024
+          </p>
+        </div>
+        <div class="card">
+          <h3>Certifications</h3>
+          <ul>
+            <li>Software Quality Assurance (SQA) – PeopleNTech | Apr 2025 – Jun 2025</li>
+            <li>Manual & Automated Testing – OSTAD | Aug 2025 – Present</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards">
+      <h2>Awards</h2>
+      <div class="chips">
+        <span class="chip">11th Convocation – University of Asia Pacific | Jul 2025</span>
+        <span class="chip">Inter-University IDEATHON 2.0 (Finalist) | Mar 2024</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;">
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/naimul-basher" target="_blank">🔗 LinkedIn</a>
+        <a class="btn btn-outline" href="https://github.com/naimulbasher" target="_blank">🔗 GitHub</a>
+        <a class="btn btn-outline" href="mailto:naimulbasher122@gmail.com" target="_blank">✉️ Email Me</a>
+        <a class="btn btn-outline" href="tel:+8801778605244" target="_blank" id="phoneLink"
+          onclick="togglePhoneNumber(event)">📞 Call Me</a>
+        
+        <!-- For Desktop: Initially hidden phone number -->
+        <span id="phoneText" class="btn btn-outline" style="display:none;"
+          onclick="togglePhoneNumber(event)">+8801778605244</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Md. Naimul Basher. All rights reserved.</footer>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.card').forEach(el => io.observe(el));
+
+    // Theme toggle (dark default, light fixed)
+    const btn = document.getElementById('theme');
+    const saved = localStorage.getItem('theme');
+    if (saved === 'light') document.body.classList.add('theme-light');
+    btn.textContent = document.body.classList.contains('theme-light') ? '☀️ Light' : '🌙 Dark';
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('theme-light');
+      const isLight = document.body.classList.contains('theme-light');
+      btn.textContent = isLight ? '☀️ Light' : '🌙 Dark';
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+  </script>
+  <script>
+    // JavaScript to toggle between showing the number and the "Call Me" link
+    function togglePhoneNumber(event) {
+      // Prevent default action of link on desktop
+      event.preventDefault();
+
+      // Check if the device is desktop
+      if (window.innerWidth > 768) {
+        const phoneText = document.getElementById('phoneText');
+        const phoneLink = document.getElementById('phoneLink');
+
+        // Toggle visibility: if number is visible, hide it and show the link
+        if (phoneText.style.display === 'none') {
+          phoneText.style.display = 'block';
+          phoneLink.style.display = 'none';
+        } else {
+          phoneText.style.display = 'none';
+          phoneLink.style.display = 'block';
+        }
+      }
+    }
+
+    // For Desktop: Initially show the phone link and hide the phone number
+    if (window.innerWidth > 768) {
+      document.getElementById('phoneLink').style.display = 'block';
+      document.getElementById('phoneText').style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
