@@ -562,10 +562,11 @@
         <a class="btn btn-outline" href="https://www.linkedin.com/in/naimul-basher" target="_blank">🔗 LinkedIn</a>
         <a class="btn btn-outline" href="https://github.com/naimulbasher" target="_blank">🔗 GitHub</a>
         <a class="btn btn-outline" href="mailto:naimulbasher122@gmail.com" target="_blank">✉️ Email Me</a>
-        <a class="btn btn-outline" href="tel:+8801778605244" target="_blank" id="phoneLink"
-          onclick="showPhoneNumber(event)">📞 Call Me</a>
+        <!-- Phone: Show phone number both on mobile and desktop when clicked -->
+        <a class="btn btn-outline" href="tel:+8801778605244" id="phoneLink" onclick="showPhoneNumber(event)">📞 Call
+          Me</a>
 
-        <!-- For Desktop: Initially hidden phone number -->
+        <!-- Display phone number when clicked -->
         <span id="phoneText" class="btn btn-outline" style="display:none;">+8801778605244</span>
       </div>
     </section>
@@ -596,23 +597,14 @@
     });
   </script>
   <script>
-    // JavaScript to show the number on desktop when "Call Me" is clicked
+    // JavaScript to show the phone number on both mobile and desktop when "Call Me" is clicked
     function showPhoneNumber(event) {
-      // Prevent default action of link on desktop
+      // Prevent default action of link (for both desktop and mobile)
       event.preventDefault();
 
-      // Check if the device is desktop
-      if (window.innerWidth > 768) {
-        // Hide the link and show the phone number text
-        document.getElementById('phoneLink').style.display = 'none';
-        document.getElementById('phoneText').style.display = 'block';
-      }
-    }
-
-    // For Desktop: Hide phone link and show phone number text if it's a desktop
-    if (window.innerWidth > 768) {
-      document.getElementById('phoneLink').style.display = 'block';
-      document.getElementById('phoneText').style.display = 'none';
+      // Hide the "Call Me" link and show the phone number
+      document.getElementById('phoneLink').style.display = 'none';
+      document.getElementById('phoneText').style.display = 'block';
     }
   </script>
 </body>
