@@ -75,6 +75,17 @@
       background: rgba(255, 255, 255, .78)
     }
 
+    .profile-img {
+      width: 120px;
+      /* Adjust size as needed */
+      height: 120px;
+      /* Keep width and height equal for a circle */
+      border-radius: 50%;
+      /* This makes the image a circle */
+      object-fit: cover;
+      /* Ensures the image fills the circle nicely */
+    }
+
     .nav {
       display: flex;
       align-items: center;
@@ -411,21 +422,24 @@
     <section class="hero" id="about">
       <div style="display: flex; align-items: center; gap: 20px;">
         <!-- Profile Image -->
-        <img src="Image/photo.jpg" alt="Md. Naimul Basher"
-          style="width:120px; height:120px; border-radius:50%; object-fit:cover; border: 4px solid yellow;">
-      
+        <img src="Image/photo.jpg" alt="Md. Naimul Basher" class="profile-img" />
+        <!-- <img src="Image/photo.jpg" alt="Md. Naimul Basher"
+          style="width:120px; height:120px; border-radius:50%; object-fit:cover; border: 4px solid yellow;"> -->
+
         <!-- Name and Details -->
         <div>
           <h1>Md. Naimul Basher</h1>
           <p>Aspiring Software Quality Assurance Engineer</p>
           <p>📍 Dhaka, Bangladesh</p>
           <p>✉️ <a href="mailto:naimulbasher122@gmail.com">naimulbasher122@gmail.com</a></p>
-      
+
           <!-- Social Links -->
           <div style="display: flex; gap: 12px;">
-            <a href="https://www.linkedin.com/in/naimul-basher" target="_blank" style="color:#50A747; font-size: 24px;">🔗
+            <a href="https://www.linkedin.com/in/naimul-basher" target="_blank"
+              style="color:#50A747; font-size: 24px;">🔗
               LinkedIn</a>
-            <a href="https://github.com/naimulbasher" target="_blank" style="color:#3b82f6; font-size: 24px;">💻 GitHub</a>
+            <a href="https://github.com/naimulbasher" target="_blank" style="color:#3b82f6; font-size: 24px;">💻
+              GitHub</a>
           </div>
         </div>
       </div>
@@ -547,7 +561,7 @@
         <a class="btn btn-outline" href="mailto:naimulbasher122@gmail.com" target="_blank">✉️ Email Me</a>
         <a class="btn btn-outline" href="tel:+8801778605244" target="_blank" id="phoneLink"
           onclick="togglePhoneNumber(event)">📞 Call Me</a>
-        
+
         <!-- For Desktop: Initially hidden phone number -->
         <span id="phoneText" class="btn btn-outline" style="display:none;"
           onclick="togglePhoneNumber(event)">+8801778605244</span>
