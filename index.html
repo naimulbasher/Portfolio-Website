@@ -84,8 +84,8 @@
       /* This makes the image a circle */
       object-fit: cover;
       /* Ensures the image fills the circle nicely */
-      border: 3px solid transparent; 
-      background-image: linear-gradient(45deg, yellow, orange); 
+      border: 3px solid transparent;
+      background-image: linear-gradient(45deg, yellow, orange);
       padding: 1.5px;
     }
 
@@ -563,11 +563,10 @@
         <a class="btn btn-outline" href="https://github.com/naimulbasher" target="_blank">🔗 GitHub</a>
         <a class="btn btn-outline" href="mailto:naimulbasher122@gmail.com" target="_blank">✉️ Email Me</a>
         <a class="btn btn-outline" href="tel:+8801778605244" target="_blank" id="phoneLink"
-          onclick="togglePhoneNumber(event)">📞 Call Me</a>
+          onclick="showPhoneNumber(event)">📞 Call Me</a>
 
         <!-- For Desktop: Initially hidden phone number -->
-        <span id="phoneText" class="btn btn-outline" style="display:none;"
-          onclick="togglePhoneNumber(event)">+8801778605244</span>
+        <span id="phoneText" class="btn btn-outline" style="display:none;">+8801778605244</span>
       </div>
     </section>
   </main>
@@ -597,28 +596,20 @@
     });
   </script>
   <script>
-    // JavaScript to toggle between showing the number and the "Call Me" link
-    function togglePhoneNumber(event) {
+    // JavaScript to show the number on desktop when "Call Me" is clicked
+    function showPhoneNumber(event) {
       // Prevent default action of link on desktop
       event.preventDefault();
 
       // Check if the device is desktop
       if (window.innerWidth > 768) {
-        const phoneText = document.getElementById('phoneText');
-        const phoneLink = document.getElementById('phoneLink');
-
-        // Toggle visibility: if number is visible, hide it and show the link
-        if (phoneText.style.display === 'none') {
-          phoneText.style.display = 'block';
-          phoneLink.style.display = 'none';
-        } else {
-          phoneText.style.display = 'none';
-          phoneLink.style.display = 'block';
-        }
+        // Hide the link and show the phone number text
+        document.getElementById('phoneLink').style.display = 'none';
+        document.getElementById('phoneText').style.display = 'block';
       }
     }
 
-    // For Desktop: Initially show the phone link and hide the phone number
+    // For Desktop: Hide phone link and show phone number text if it's a desktop
     if (window.innerWidth > 768) {
       document.getElementById('phoneLink').style.display = 'block';
       document.getElementById('phoneText').style.display = 'none';
