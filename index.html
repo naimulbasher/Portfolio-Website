@@ -76,14 +76,20 @@
     }
 
     .profile-img {
-      width: 120px;
-      /* Adjust size as needed */
-      height: 120px;
-      /* Keep width and height equal for a circle */
+      width: 150px;
+      /* Width for the image */
+      height: 150px;
+      /* Height for the image */
       border-radius: 50%;
-      /* This makes the image a circle */
+      /* This makes the image circular */
       object-fit: cover;
-      /* Ensures the image fills the circle nicely */
+      /* Ensures the image covers the circular area perfectly */
+      max-width: 100%;
+      /* Ensures the image doesn't exceed its container's width */
+      display: block;
+      /* Ensures it behaves like a block element */
+      margin: 0 auto;
+      /* Centers the image horizontally */
     }
 
     .nav {
