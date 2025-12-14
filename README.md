@@ -43,7 +43,7 @@ I am an **enthusiastic Software Quality Assurance Engineer** with a passion for 
 ### **Manual Testing on Evershop**  
 - Conducted **functional, regression**, and **usability testing** on a web application.
 - Designed test cases, logged defects, and prepared **test reports**.
-- Tools used: ***Google Sheet/Docs**, ** JIRA**, **TestRail**.
+- Tools used: ***Google Sheet/Docs**, **JIRA**, **TestRail**.
 
 ## 🎓 Education & Certifications
 
