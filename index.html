@@ -75,6 +75,20 @@
       background: rgba(255, 255, 255, .78)
     }
 
+    .profile-img {
+      width: 120px;
+      /* Adjust size as needed */
+      height: 120px;
+      /* Keep width and height equal for a circle */
+      border-radius: 50%;
+      /* This makes the image a circle */
+      object-fit: cover;
+      /* Ensures the image fills the circle nicely */
+      border: 3px solid transparent;
+      background-image: linear-gradient(45deg, yellow, orange);
+      padding: 1.5px;
+    }
+
     .nav {
       display: flex;
       align-items: center;
@@ -397,7 +411,7 @@
       </nav>
       <div style="display:flex; gap:10px; align-items:center; flex-wrap: wrap;">
         <button id="theme" class="toggle" title="Toggle Theme">🌙 Dark</button>
-        <a class="btn btn-outline" href="cv/CV.pdf" target="_blank" rel="MD. Naimul Basher">📄 CV</a>
+        <a class="btn btn-outline" href="cv/Naimul_Basher_SQA_Engineer.pdf" target="_blank" rel="MD. Naimul Basher">📄 CV</a>
         <a class="btn btn-primary"
           href="mailto:naimulbasher122@gmail.com?subject=Interested%20in%20Hiring%20Md.%20Naimul%20Basher%20for%20an%20SQA%20Role&body=Hi%20Md.%20Naimul%20Basher,%0D%0A%0D%0AI%20visited%20your%20portfolio%20and%20was%20impressed%20by%20your%20skills%20in%20Software%20Quality%20Assurance.%20I’d%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you.%0D%0A%0D%0ABest%20regards,%0D%0A[Your%20Name]%0D%0A[Your%20Company]%0D%0A[Contact%20Info]"
           target="_blank">
@@ -411,21 +425,24 @@
     <section class="hero" id="about">
       <div style="display: flex; align-items: center; gap: 20px;">
         <!-- Profile Image -->
-        <img src="Image/photo.jpg" alt="Md. Naimul Basher"
-          style="width:120px; height:120px; border-radius:50%; object-fit:cover; border: 4px solid yellow;">
-      
+        <img src="Image/photo.jpg" alt="Md. Naimul Basher" class="profile-img" />
+        <!-- <img src="Image/photo.jpg" alt="Md. Naimul Basher"
+          style="width:120px; height:120px; border-radius:50%; object-fit:cover; border: 4px solid yellow;"> -->
+
         <!-- Name and Details -->
         <div>
           <h1>Md. Naimul Basher</h1>
           <p>Aspiring Software Quality Assurance Engineer</p>
           <p>📍 Dhaka, Bangladesh</p>
           <p>✉️ <a href="mailto:naimulbasher122@gmail.com">naimulbasher122@gmail.com</a></p>
-      
+
           <!-- Social Links -->
           <div style="display: flex; gap: 12px;">
-            <a href="https://www.linkedin.com/in/naimul-basher" target="_blank" style="color:#50A747; font-size: 24px;">🔗
+            <a href="https://www.linkedin.com/in/naimul-basher" target="_blank"
+              style="color:#50A747; font-size: 24px;">🔗
               LinkedIn</a>
-            <a href="https://github.com/naimulbasher" target="_blank" style="color:#3b82f6; font-size: 24px;">💻 GitHub</a>
+            <a href="https://github.com/naimulbasher" target="_blank" style="color:#3b82f6; font-size: 24px;">💻
+              GitHub</a>
           </div>
         </div>
       </div>
@@ -443,7 +460,7 @@
     <section id="skills">
       <h2>Skills</h2>
       <div class="chips">
-        <span class="chip">Manual Testing</span><span class="chip">Test Case Design</span><span class="chip">Bug
+        <span class="chip">Manual Testing</span><span class="chip">API Testing</span><span class="chip">Test Case Design</span><span class="chip">Bug
           Reporting</span>
         <span class="chip">Regression Testing</span><span class="chip">JIRA (Basic)</span><span class="chip">TestRail
           (Basic)</span>
@@ -468,22 +485,7 @@
             <li>Learning basics of Selenium WebDriver and Postman collections.</li>
           </ul>
         </div>
-        <div class="card">
-          <h3>SEO Intern</h3>
-          <div class="muted">Eutropia IT, Shyamoli • Jul 2024 – Dec 2024</div>
-          <ul>
-            <li>Optimized site content; analyzed performance with SEO tools.</li>
-            <li>Validated website updates and fixes, improving QA awareness.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Content Writer Intern</h3>
-          <div class="muted">Himel Shop, Mirpur • Mar 2025 – Jun 2025</div>
-          <ul>
-            <li>Created and proofread product content for accuracy.</li>
-            <li>Collaborated with marketing and dev to maintain quality.</li>
-          </ul>
-        </div>
+
       </div>
     </section>
 
@@ -491,22 +493,15 @@
       <h2>Projects</h2>
       <div class="grid grid-2">
         <div class="card">
-          <h3><a href="https://github.com/naimulbasher/Manual-Testing-on-EduTech" target="_blank">Manual Testing on
-              EduTech Platform</a></h3>
-          <div class="muted">Manual Testing • JIRA • Test Cases</div>
+          <h3><a href="https://github.com/naimulbasher/Manual-Testing-on-Ever-Shop" target="_blank">Manual-Testing-on-Ever-Shop</a></h3>
+          <div class="muted">Manual Testing • Api Testing</div>
           <ul>
-            <li>Functional, regression, and usability testing on a web app.</li>
-            <li>Designed & executed test cases; logged defects in JIRA.</li>
-            <li>Prepared test summary reports aligned to objectives.</li>
+            <li>Preformed Manual Testing & Api Testing</li>
+            <li>Performed Api Testing on (Postman)</li>
+            <li>Manual Testing Covered (Test Case, Test Execution Report, UI Testing, Defect Log, Feedback, Issue Report log).</li>
           </ul>
         </div>
-        <div class="card">
-          <h3>Adil Pay App (Upcoming)</h3>
-          <div class="muted">Selenium • Playwright • Automation</div>
-          <ul>
-            <li>Automation testing in progress (Selenium + Playwright).</li>
-          </ul>
-        </div>
+
       </div>
     </section>
 
@@ -517,7 +512,7 @@
           <h3>Education</h3>
           <p class="muted" style="margin-top:6px;">
             <strong>B.Sc. in Computer Science and Engineering (CSE)</strong><br />
-            University of Asia Pacific • CGPA: 3.34/4.00<br />
+            University of Asia Pacific • CGPA: 3.35/4.00<br />
             Sep 2020 – Mar 2024
           </p>
         </div>
@@ -534,7 +529,6 @@
     <section id="awards">
       <h2>Awards</h2>
       <div class="chips">
-        <span class="chip">11th Convocation – University of Asia Pacific | Jul 2025</span>
         <span class="chip">Inter-University IDEATHON 2.0 (Finalist) | Mar 2024</span>
       </div>
     </section>
@@ -545,12 +539,12 @@
         <a class="btn btn-outline" href="https://www.linkedin.com/in/naimul-basher" target="_blank">🔗 LinkedIn</a>
         <a class="btn btn-outline" href="https://github.com/naimulbasher" target="_blank">🔗 GitHub</a>
         <a class="btn btn-outline" href="mailto:naimulbasher122@gmail.com" target="_blank">✉️ Email Me</a>
-        <a class="btn btn-outline" href="tel:+8801778605244" target="_blank" id="phoneLink"
-          onclick="togglePhoneNumber(event)">📞 Call Me</a>
-        
-        <!-- For Desktop: Initially hidden phone number -->
-        <span id="phoneText" class="btn btn-outline" style="display:none;"
-          onclick="togglePhoneNumber(event)">+8801778605244</span>
+        <!-- Phone: Show phone number both on mobile and desktop when clicked -->
+        <a class="btn btn-outline" href="tel:+8801778605244" id="phoneLink" onclick="showPhoneNumber(event)">📞 Call
+          Me</a>
+
+        <!-- Display phone number when clicked -->
+        <span id="phoneText" class="btn btn-outline" style="display:none;">+8801778605244</span>
       </div>
     </section>
   </main>
@@ -580,11 +574,12 @@
     });
   </script>
   <script>
-    // JavaScript to toggle between showing the number and the "Call Me" link
-    function togglePhoneNumber(event) {
-      // Prevent default action of link on desktop
+    // JavaScript to show the phone number on both mobile and desktop when "Call Me" is clicked
+    function showPhoneNumber(event) {
+      // Prevent default action of link (for both desktop and mobile)
       event.preventDefault();
 
+<<<<<<< HEAD
       // Check if the device is desktop
       if (window.innerWidth > 768) {
         const phoneText = document.getElementById('phoneText');
@@ -605,6 +600,11 @@
     if (window.innerWidth > 768) {
       document.getElementById('phoneLink').style.display = 'block';
       document.getElementById('phoneText').style.display = 'none'; 
+=======
+      // Hide the "Call Me" link and show the phone number
+      document.getElementById('phoneLink').style.display = 'none';
+      document.getElementById('phoneText').style.display = 'block';
+>>>>>>> main
     }
   </script>
 </body>
