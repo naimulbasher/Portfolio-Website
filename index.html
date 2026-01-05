@@ -579,32 +579,9 @@
       // Prevent default action of link (for both desktop and mobile)
       event.preventDefault();
 
-<<<<<<< HEAD
-      // Check if the device is desktop
-      if (window.innerWidth > 768) {
-        const phoneText = document.getElementById('phoneText');
-        const phoneLink = document.getElementById('phoneLink');
-
-        // Toggle visibility: if number is visible, hide it and show the link
-        if (phoneText.style.display === 'none') {
-          phoneText.style.display = 'block';
-          phoneLink.style.display = 'none';
-        } else {
-          phoneText.style.display = 'none';
-          phoneLink.style.display = 'block';
-        }
-      }
-    }
-
-    // For Desktop: Initially show the phone link and hide the phone number
-    if (window.innerWidth > 768) {
-      document.getElementById('phoneLink').style.display = 'block';
-      document.getElementById('phoneText').style.display = 'none'; 
-=======
       // Hide the "Call Me" link and show the phone number
       document.getElementById('phoneLink').style.display = 'none';
       document.getElementById('phoneText').style.display = 'block';
->>>>>>> main
     }
   </script>
 </body>
