@@ -32,44 +32,31 @@ I am an **enthusiastic Software Quality Assurance Engineer** with a passion for 
 
 ## 💼 Experience
 
-### **Software Quality Assurance Intern**  
+### **Quality Assurance Intern**  
 **Bangladesh Software Solution** — *October 2025 – Present*  
 - Conducting **manual testing** and **exploratory testing** of web applications.
 - Writing test cases and executing them.
 - Reporting bugs in **JIRA** and **TestRail**.
 
-### **SEO Intern**  
-**Eutropia IT, Shyamoli** — *July 2024 – December 2024*  
-- Conducted **SEO optimization** and performance analysis using various SEO tools.
-- Collaborated with development teams for improving web content.
-
-### **Content Writer Intern**  
-**Himel Shop, Mirpur** — *March 2025 – June 2025*  
-- Proofreading and creating high-quality product content.
-- Ensured consistency in the content while collaborating with marketing and development teams.
-
 ## 🚀 Projects
 
-### **Manual Testing on EduTech Platform**  
+### **Manual Testing on Evershop**  
 - Conducted **functional, regression**, and **usability testing** on a web application.
 - Designed test cases, logged defects, and prepared **test reports**.
-- Tools used: **JIRA**, **TestRail**.
-
-### **Adil Pay App (Upcoming)**  
-- In progress: **Automation testing** using **Selenium** and **Playwright**.
+- Tools used: ***Google Sheet/Docs**, **JIRA**, **TestRail**.
 
 ## 🎓 Education & Certifications
 
 ### **B.Sc. in Computer Science and Engineering**  
 University of Asia Pacific — *September 2020 – March 2024*  
-**CGPA**: 3.34/4.00
+**CGPA**: 3.35/4.00
 
 ### Certifications:
 - **Software Quality Assurance (SQA)** — PeopleNTech — *April 2025 – June 2025*  
 - **Manual & Automated Testing** — OSTAD — *August 2025 – Present*
 
 ## 🏆 Awards
-- **11th Convocation – University of Asia Pacific** — *July 2025*
+
 - **Inter-University IDEATHON 2.0 (Finalist)** — *March 2024*
 
 ## 📞 Contact
@@ -84,3 +71,4 @@ Feel free to get in touch with me for opportunities or collaborations:
 
 **Thanks for visiting my portfolio! Feel free to reach out to me anytime.**
 # Portfolio-Website
+ 🔗 **Portfolio**: [Md. Naimul Basher](https://naimulbasher.github.io/Portfolio-Website/)
